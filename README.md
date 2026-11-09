@@ -178,6 +178,14 @@ Practical exercises and investigations are conducted in controlled environments,
 
 *This portfolio does not promote unauthorized access, malicious activity, or the misuse of cybersecurity tools.*
 
+## Licensing
+
+Original source code and scripts in this repository are released under the [MIT License](LICENSE).
+
+Original educational documentation and written materials are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-DOCS.md) license. When reusing these materials, please provide appropriate attribution to Daniel Solano.
+
+Third-party materials included in this repository remain subject to their respective licenses and usage conditions.
+
 ## Learning Philosophy
 
 Understand → Practice → Investigate → Document → Improve

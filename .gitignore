@@ -1,0 +1,52 @@
+# Secrets and credentials — never publish these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.ssh/
+id_rsa*
+id_ed25519*
+*credentials*
+*secret*
+.aws/
+.azure/
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Virtualization — local virtual machine disks and state
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.qcow2
+*.ova
+*.ovf
+*.snapshot
+*.vmem
+*.vmsn
+
+# Laboratory evidence is NOT ignored:
+# .pcap / .pcapng captures, screenshots, images, sanitized logs,
+# Bash and Python scripts, configuration examples, Markdown files,
+# and project documentation must remain eligible for version control.
