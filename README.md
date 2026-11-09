@@ -71,6 +71,9 @@ The technologies and tools explored throughout this portfolio will evolve as I p
 
 Some of the tools and technologies currently included in my learning environment are:
 
+### Virtualization
+- Oracle VM VirtualBox
+
 ### Operating Systems
 - Ubuntu Linux
 - Rocky Linux
