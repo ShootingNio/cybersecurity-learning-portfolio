@@ -119,9 +119,9 @@ My approach to learning cybersecurity follows five principles:
 
 **Improve** — Review previous work, identify knowledge gaps, and progressively increase technical complexity.
 
-The objective is not simply to complete exercises, but to develop the ability to understand, investigate, and explain technical security problems.
+*The objective is not simply to complete exercises, but to develop the ability to understand, investigate, and explain technical security problems.*
 
-##Research & References
+## Research & References
 
 Research is an essential part of my learning process.
 
@@ -129,21 +129,21 @@ As a bilingual researcher, I use both English and Spanish resources to investiga
 
 My research and documentation principles include:
 
--Prioritize official documentation and reputable technical sources.
+- Prioritize official documentation and reputable technical sources.
 
--Consult research papers, technical publications, security advisories, and trusted community resources.
+- Consult research papers, technical publications, security advisories, and trusted community resources.
 
--Use relevant materials in both English and Spanish.
+- Use relevant materials in both English and Spanish.
 
--Document technical findings in English to maintain consistency throughout the portfolio.
+- Document technical findings in English to maintain consistency throughout the portfolio.
 
--Include references for important technical claims, procedures, and external resources.
+- Include references for important technical claims, procedures, and external resources.
 
--Preserve original technical terminology when translating or explaining concepts.
+- Preserve original technical terminology when translating or explaining concepts.
 
-The purpose is to develop independent research skills while maintaining accurate, reproducible, and well-supported technical documentation.
+*The purpose is to develop independent research skills while maintaining accurate, reproducible, and well-supported technical documentation.*
 
-##Repository Organization
+## Repository Organization
 
 The repository is organized around the 17-phase learning roadmap.
 
@@ -151,31 +151,31 @@ Each phase will contain relevant documentation, practical exercises, investigati
 
 A typical phase may include:
 
-**Practices**: Structured hands-on exercises focused on specific technical concepts.
+**Practices:** Structured hands-on exercises focused on specific technical concepts.
 
-**Mini-Labs**: Smaller exercises designed to reinforce individual skills.
+**Mini-Labs:** Smaller exercises designed to reinforce individual skills.
 
-**Investigations**: Technical analysis of systems, network behavior, security mechanisms, and vulnerabilities.
+**Investigations:** Technical analysis of systems, network behavior, security mechanisms, and vulnerabilities.
 
-**Projects**: Larger practical implementations combining multiple concepts and tools.
+**Projects:** Larger practical implementations combining multiple concepts and tools.
 
-Documentation will be added progressively, reflecting actual completed work rather than planned or unfinished exercises.
+*Documentation will be added progressively, reflecting actual completed work rather than planned or unfinished exercises.*
 
-##Featured Projects
+## Featured Projects
 
 This section will highlight selected projects demonstrating the practical application of cybersecurity concepts, technical problem-solving, and independent research.
 
-Projects will be added as they are developed and completed.
+*Projects will be added as they are developed and completed.*
 
-##Ethical Use & Disclaimer
+## Ethical Use & Disclaimer
 
 All security-related activities documented in this repository are intended for educational purposes and authorized testing.
 
 Practical exercises and investigations are conducted in controlled environments, virtual machines, or systems for which appropriate authorization has been obtained.
 
-This portfolio does not promote unauthorized access, malicious activity, or the misuse of cybersecurity tools.
+*This portfolio does not promote unauthorized access, malicious activity, or the misuse of cybersecurity tools.*
 
-##Learning Philosophy
+## Learning Philosophy
 
 Understand → Practice → Investigate → Document → Improve
 
