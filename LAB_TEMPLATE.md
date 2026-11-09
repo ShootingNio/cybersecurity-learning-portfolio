@@ -13,6 +13,10 @@
 | Status | [Not started / In progress / Completed] |
 | Date | [YYYY-MM-DD] |
 | Author | [Name] |
+| Scope / Target | [Authorized target or controlled laboratory environment] |
+| Authorization | [Personal lab / Explicitly authorized environment] |
+
+> **Scope / Target** identifies the systems, networks, or applications included in the laboratory. **Authorization** establishes the context — a personal lab or an explicitly authorized environment — and encourages responsible, controlled security testing. Both fields apply across Linux, networking, OSINT, Blue Team, Red Team, and other cybersecurity exercises.
 
 ### Description
 
@@ -46,47 +50,59 @@
 
 ## 5. Laboratory Procedure
 
-> Record steps chronologically. For each step, state its purpose, show the exact commands executed, explain the commands and their arguments, paste the actual observed output, and interpret it. Clearly distinguish expected output from actual observed output.
+> Record steps chronologically. For each step, clearly distinguish five elements: **Commands Executed** (the exact commands actually executed during the laboratory), **Command Explanation** (purpose, flags, arguments, and expected behavior), **Expected Output** (expected results, when relevant and known), **Actual Observed Output** (real output obtained from the environment), and **Technical Interpretation** (what the observed output demonstrates). Never present expected output as actual evidence.
 
 ### Step 1: [Step Title]
 
 **Purpose:** [Why this step is performed.]
 
-**Commands:**
+**Commands Executed:**
 
 ```bash
-[command with arguments]
+[exact commands actually executed]
 ```
 
-**Explanation:** [What the command does and what each flag and argument means.]
+**Command Explanation:** [Purpose, flags, arguments, and expected behavior.]
 
-**Observed Output:**
+**Expected Output:**
+
+```text
+[Insert expected output, when relevant and known]
+```
+
+**Actual Observed Output:**
 
 ```text
 [Insert actual terminal output]
 ```
 
-**Interpretation:** [What the output shows and why it matters.]
+**Technical Interpretation:** [What the observed output demonstrates.]
 
 ### Step 2: [Step Title]
 
 **Purpose:** [Why this step is performed.]
 
-**Commands:**
+**Commands Executed:**
 
 ```bash
-[command with arguments]
+[exact commands actually executed]
 ```
 
-**Explanation:** [What the command does and what each flag and argument means.]
+**Command Explanation:** [Purpose, flags, arguments, and expected behavior.]
 
-**Observed Output:**
+**Expected Output:**
+
+```text
+[Insert expected output, when relevant and known]
+```
+
+**Actual Observed Output:**
 
 ```text
 [Insert actual terminal output]
 ```
 
-**Interpretation:** [What the output shows and why it matters.]
+**Technical Interpretation:** [What the observed output demonstrates.]
 
 > Repeat the structure above for each additional step.
 
@@ -113,6 +129,12 @@
 ### Supporting Evidence
 
 - [Screenshot / capture file and what it shows.]
+
+Embed screenshots directly in the Markdown so they render on GitHub. Use descriptive filenames and reference the correct relative path from the lab directory. Screenshots must come from actual laboratory work — never use placeholder or stock images as evidence.
+
+### ICMP Traffic Analysis
+The following screenshot demonstrates the ICMP packets observed during the experiment.
+![ICMP Analysis](screenshots/02-icmp-analysis.png)
 
 ## 8. Security Analysis
 
@@ -196,7 +218,9 @@ practice-01-example/
 | --- | --- |
 | Completion Status | [Not started / In progress / Completed] |
 | Completion Date | [YYYY-MM-DD] |
-| Documentation Version | [e.g., v1.0] |
+| Documentation Version | [e.g., v1.0 — version of this report] |
 | Author | [Name] |
 | Related Phase | [e.g., Phase 01 — Linux, Networking & Foundations] |
 | Related Resources | [Links to related labs, notes, or projects] |
+
+> **Documentation Version** is the version of this Markdown report (e.g., v1.0). It is not the version of the software used. **Tool Version** — the actual software version used in the lab — is documented in Section 3, Laboratory Environment. Do not confuse documentation versioning with software versioning.
