@@ -9,7 +9,7 @@
 | Phase | Phase 01 — Linux, Networking & Foundations |
 | Category | Linux Administration / Filesystem Fundamentals |
 | Status | Completed |
-| Date | 2025-09-01 |
+| Date | 2026-11-01 |
 | Author | Daniel Solano |
 | Scope / Target | Personal Ubuntu virtual machine (controlled laboratory environment) |
 | Authorization | Personal lab |
@@ -25,7 +25,7 @@ This mini-lab practices basic Linux filesystem navigation and file management us
 - Removed the copy with `rm` and the empty `evidence/` directory with `rmdir`; the final listing contains only `lab1.txt`.
 - Confirmed the working distinction between `rm` (files) and `rmdir` (empty directories only), and that `mv` serves both as a move and a rename operation.
 
-> **Documentation accuracy note.** The original execution took place on September 1, 2025, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `hello.txt`, `example2/`) and includes command-entry mistakes that were corrected during that session. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document.
+> **Documentation accuracy note.** The original execution took place on November 1, 2026, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `hello.txt`, `example2/`) and includes command-entry mistakes that were corrected during that session. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document.
 
 ## 2. Objectives
 
@@ -54,11 +54,12 @@ This mini-lab practices basic Linux filesystem navigation and file management us
 - **Current working directory:** The directory the shell is operating in. `pwd` prints it, and `cd` changes it.
 - **Hidden entries (`.` and `..`):** Every directory contains `.` (itself) and `..` (its parent). `ls` hides them by default; `ls -la` shows them along with all other hidden files.
 - **`ls -l` columns:** Permissions, link count, owner, group, size in bytes, modification date, and name. An empty file created with `touch` has size 0 bytes.
+- **Default permissions and `umask`:** The permissions of a newly created file or directory depend on the shell's `umask`, which masks bits from the base permissions (`666` for files, `777` for directories). The same commands can therefore produce different permissions on different systems — `664`/`775` is one common result, not a universal default.
 - **Files vs. directories:** `touch` creates an empty regular file; `mkdir` creates a directory. `rm` removes files, while `rmdir` removes empty directories only.
 
 ## 5. Laboratory Procedure
 
-> The original execution (September 1, 2025) was not captured in screenshots. The command sequence below is the authoritative procedure from the author's handwritten notes. The outputs stated were verified by reproducing the procedure in the same environment; the reproduction confirmed every step produces the result stated. The screenshot in Section 13 is from a later recreation with different names and is not presented as evidence of this original run.
+> The original execution (November 1, 2026) was not captured in screenshots. The command sequence below is the authoritative procedure from the author's handwritten notes. The outputs shown are representative: they illustrate what each command produces, confirmed by reproducing the same command sequence on a Linux system. They are not a transcript of the original execution, and no claim is made that the original run was independently recorded. The screenshot in Section 13 is from a later recreation with different names and is not presented as evidence of this original run.
 
 ### Step 1: Create the laboratory directory
 
@@ -74,7 +75,7 @@ mkdir ~/cyberlab
 
 **Expected Output:** No output on success; the directory is created silently.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 (no output — success is silent)
@@ -96,7 +97,7 @@ ls
 
 **Expected Output:** The listing includes `cyberlab` among the home directory entries.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 cyberlab
@@ -119,7 +120,7 @@ pwd
 
 **Expected Output:** `pwd` returns the absolute path of the laboratory directory.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 /home/nio/cyberlab
@@ -142,7 +143,7 @@ ls
 
 **Expected Output:** `ls` shows `notes.txt`.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 notes.txt
@@ -164,7 +165,7 @@ mkdir evidence
 
 **Expected Output:** No output on success.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 (no output — success is silent)
@@ -187,7 +188,7 @@ ls -la
 
 **Expected Output:** `ls -l` shows the `evidence` directory and the 0-byte `notes.txt` file. `ls -la` shows the same entries plus `.` and `..`.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 # ls -l
@@ -217,7 +218,7 @@ cp notes.txt evidence/
 
 **Expected Output:** No output on success; the copy is created at `evidence/notes.txt`.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 (no output — success is silent)
@@ -239,7 +240,7 @@ ls evidence
 
 **Expected Output:** The listing shows `notes.txt`.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 notes.txt
@@ -262,7 +263,7 @@ ls
 
 **Expected Output:** The listing shows `evidence` and `lab1.txt`; `notes.txt` is gone from the top level.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 evidence
@@ -285,7 +286,7 @@ rm evidence/notes.txt
 
 **Expected Output:** No output on success; `evidence/` becomes empty.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 (no output — success is silent)
@@ -308,7 +309,7 @@ ls -la
 
 **Expected Output:** The final listing shows only `lab1.txt` (plus `.` and `..`); `evidence` no longer appears.
 
-**Actual Observed Output:**
+**Representative Output:**
 
 ```text
 .
@@ -343,9 +344,9 @@ lab1.txt      (0 bytes)
 - `ls -l` and `ls -la` differ only by the hidden `.` and `..` entries; both confirm the same two visible entries at Step 6.
 - `mv` within one directory acts as a rename; `cp` leaves the original untouched; `rmdir` refuses non-empty directories (by design — see Section 9).
 
-### Expected vs. Observed Behavior
+### Expected vs. Representative Behavior
 
-| Item | Expected | Observed | Notes |
+| Item | Expected | Representative | Notes |
 | --- | --- | --- | --- |
 | `mkdir ~/cyberlab` | Directory created silently | Created silently | Verified by `ls` in Step 2 |
 | `pwd` after `cd` | `/home/nio/cyberlab` | `/home/nio/cyberlab` | Matches |
@@ -366,7 +367,7 @@ lab1.txt      (0 bytes)
 
 ### Security Mechanisms
 
-- **File permissions:** Files and directories created during the exercise carry the system defaults (files `664`, directories `775` under the default umask), readable by the owner and group. No permissions were changed in this lab.
+- **File permissions:** Default permissions depend on the shell's `umask`. The recreated session (November 16, 2026) showed files `664` and directories `775` under the VM's default umask (`0002`); on a system with a different umask (for example `0022`, a common default elsewhere) the same commands would produce files `644` and directories `755`. These values are therefore not universal Linux defaults, and the recreated session's permissions are not attributed to the original run. No permissions were changed in this lab.
 - **Controlled environment:** All operations ran on a personal virtual machine; no network service, remote host, or other user's data was involved.
 
 ### Vulnerabilities & Weaknesses
@@ -389,7 +390,7 @@ lab1.txt      (0 bytes)
 
 ## 9. Troubleshooting & Challenges
 
-> The issues below were observed during the **recreated session (November 16, 2026)**, not the original execution. No issues were recorded during the original execution (September 1, 2025). They are documented here because they illustrate a common and instructive failure mode.
+> The issues below were observed during the **recreated session (November 16, 2026)**, not the original execution. No issues were recorded during the original execution (November 1, 2026). They are documented here because they illustrate a common and instructive failure mode.
 
 | Issue | Diagnostics | Resolution | Status |
 | --- | --- | --- | --- |
@@ -440,7 +441,7 @@ mini-lab-01-linux-files-and-directories/
 | Field | Value |
 | --- | --- |
 | Completion Status | Completed |
-| Completion Date | 2025-09-01 |
+| Completion Date | 2026-11-01 |
 | Documentation Version | v1.0 |
 | Author | Daniel Solano |
 | Related Phase | Phase 01 — Linux, Networking & Foundations |
