@@ -26,7 +26,7 @@ This mini-lab introduces Linux file permissions and user identification: reading
 - Identified the current user with `whoami`, and inspected UID, GID, and group membership with `id` and `groups` (UID 1000, GID 1000).
 - Inspected sudo privileges with `sudo -l`, which showed the user may run any command as any user (`(ALL : ALL) ALL`).
 
-> **Documentation accuracy note.** The original execution took place on September 3, 2026, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `key.txt`) and shows `hi.txt`, which was already present in the recreated directory. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document.
+> **Documentation accuracy note.** The original execution took place on September 3, 2026, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `key.txt`) and shows `hi.txt`, which was already present in the recreated directory. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document. Usernames and hostnames in commands and outputs use the generic identifiers `student` (local user) and `linux-vm` (hostname) in place of the author's real local account details.
 
 ## 2. Objectives
 
@@ -78,12 +78,12 @@ ls
 
 **Command Explanation:** `cd` changes the working directory to `~/cyberlab`; `pwd` prints it; `ls` lists the directory contents (including `lab1.txt` from Mini-Lab 1).
 
-**Expected Output:** `pwd` returns `/home/nio/cyberlab`; `ls` shows the files already present in the directory.
+**Expected Output:** `pwd` returns `/home/student/cyberlab`; `ls` shows the files already present in the directory.
 
 **Representative Output:**
 
 ```text
-/home/nio/cyberlab
+/home/student/cyberlab
 lab1.txt
 ```
 
@@ -107,10 +107,10 @@ ls -l
 **Representative Output:**
 
 ```text
--rw-rw-r-- 1 nio nio 0 Jul 14 11:28 lab1.txt
+-rw-rw-r-- 1 student student 0 Jul 14 11:28 lab1.txt
 ```
 
-**Technical Interpretation:** This is the permission example recorded in the author's notes, shown here to explain the structure — it is the listing line for `lab1.txt`, not for `secret.txt`. Reading it left to right: `-` means a regular file; `rw-` is the owner's permissions (read and write); `rw-` is the group's permissions (read and write); `r--` is the others' permissions (read only). The owner and group are both `nio`, and the file is 0 bytes.
+**Technical Interpretation:** This is the permission example recorded in the author's notes, shown here to explain the structure — it is the listing line for `lab1.txt`, not for `secret.txt`. Reading it left to right: `-` means a regular file; `rw-` is the owner's permissions (read and write); `rw-` is the group's permissions (read and write); `r--` is the others' permissions (read only). The owner and group are both `student`, and the file is 0 bytes.
 
 > The permission values a new file receives depend on the `umask`. On the author's VM (umask `0002`) a new file is created as `-rw-rw-r--` (`664`). Reproducing the same `touch` on a system with umask `0007` produced `-rw-rw----` (`660`) instead — the same command, different defaults. No specific default is claimed as universal.
 
@@ -159,7 +159,7 @@ ls -l secret.txt
 **Representative Output:**
 
 ```text
--rw------- 1 nio nio 0 Nov 16 12:38 secret.txt
+-rw------- 1 student student 0 Nov 16 12:38 secret.txt
 ```
 
 **Technical Interpretation:** The `600` mode is in effect: owner read and write only, nothing for group or others.
@@ -181,10 +181,10 @@ whoami
 **Representative Output:**
 
 ```text
-nio
+student
 ```
 
-**Technical Interpretation:** The session runs as user `nio`, the owner of the laboratory files.
+**Technical Interpretation:** The session runs as user `student`, the owner of the laboratory files.
 
 ### Step 6: Inspect user and group information
 
@@ -198,12 +198,12 @@ id
 
 **Command Explanation:** `id` prints the user ID (UID), the primary group ID (GID), and all supplementary groups with their IDs.
 
-**Expected Output:** `uid=1000(nio) gid=1000(nio)` followed by the supplementary groups.
+**Expected Output:** `uid=1000(student) gid=1000(student)` followed by the supplementary groups.
 
 **Representative Output:**
 
 ```text
-uid=1000(nio) gid=1000(nio) groups=1000(nio),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),111(lpadmin),114(lxd),115(wireshark),973(vboxsf)
+uid=1000(student) gid=1000(student) groups=1000(student),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),111(lpadmin),114(lxd),115(wireshark),973(vboxsf)
 ```
 
 **Technical Interpretation:** The UID and GID are both `1000` (recorded in the author's notes). The user belongs to several supplementary groups, including `adm`, `cdrom`, `sudo`, `dip`, `plugdev`, `users`, `lpadmin`, `lxd`, `wireshark`, and `vboxsf` — the full list is as observed in the recreated session on the same machine. Group membership is what grants capabilities such as using `sudo` or capturing packets with Wireshark.
@@ -225,7 +225,7 @@ groups
 **Representative Output:**
 
 ```text
-nio adm cdrom sudo dip plugdev users
+student adm cdrom sudo dip plugdev users
 ```
 
 **Technical Interpretation:** The groups recorded in the author's notes. The recreated session additionally showed `lpadmin`, `lxd`, `wireshark`, and `vboxsf`. Membership in `sudo` is what allows the user to run commands with administrative privileges (Step 8).
@@ -247,7 +247,7 @@ sudo -l
 **Representative Output:**
 
 ```text
-User nio may run the following commands on Nio:
+User student may run the following commands on linux-vm:
     (ALL : ALL) ALL
 ```
 
@@ -274,7 +274,7 @@ User nio may run the following commands on Nio:
 
 - `chmod 600 secret.txt` changed the permission string from the default (`-rw-rw-r--` on the author's VM) to `-rw-------`, verified with `ls -l secret.txt`.
 - The permission structure is consistent: the first character is the file type, followed by owner, group, and others triplets.
-- The current user is `nio` (UID 1000, GID 1000), a member of several supplementary groups including `sudo`.
+- The current user is `student` (UID 1000, GID 1000), a member of several supplementary groups including `sudo`.
 - `sudo -l` reported `(ALL : ALL) ALL` — the user holds full sudo privileges on this machine.
 - The recreated session showed the same workflow with different names (`key.txt` instead of `secret.txt`): the file was created as `-rw-rw-r--`, then changed to `-rw-------` after `chmod 600`.
 
@@ -285,9 +285,9 @@ User nio may run the following commands on Nio:
 | `touch secret.txt` | Empty file created | File created (0 bytes) | Matches |
 | `ls -l` permission string | Shows owner/group/others triplets | `-rw-rw-r--` on the author's VM | Default depends on `umask` |
 | `chmod 600 secret.txt` | Permission string becomes `-rw-------` | `-rw-------` | Matches; verified in Step 4 |
-| `whoami` | Effective username | `nio` | Matches |
-| `id` | UID 1000, GID 1000, groups listed | `uid=1000(nio) gid=1000(nio)`, groups listed | Matches the notes |
-| `groups` | Group names listed | `nio adm cdrom sudo dip plugdev users` | Matches the notes |
+| `whoami` | Effective username | `student` | Matches |
+| `id` | UID 1000, GID 1000, groups listed | `uid=1000(student) gid=1000(student)`, groups listed | Matches the notes |
+| `groups` | Group names listed | `student adm cdrom sudo dip plugdev users` | Matches the notes |
 | `sudo -l` | Permitted sudo commands listed | `(ALL : ALL) ALL` | As observed in the recreation |
 
 ### Conceptual Questions and Answers

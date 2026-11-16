@@ -1,6 +1,6 @@
 # Lab Template — Cybersecurity Learning Portfolio
 
-> **How to use this template:** Copy this file into the lab directory as `README.md` and replace every placeholder in square brackets with the actual information for the lab. Delete any section that does not apply and note why it was omitted. Never invent terminal output, test results, findings, or screenshots — record only what was actually observed. Sanitize all evidence before publishing: remove credentials, private keys, API tokens, personal information, and sensitive network details (public IP addresses, internal hostnames, MAC addresses) from commands, outputs, screenshots, and captures.
+> **How to use this template:** Copy this file into the lab directory as `README.md` and replace every placeholder in square brackets with the actual information for the lab. Delete any section that does not apply and note why it was omitted. Never invent terminal output, test results, findings, or screenshots — record only what was actually observed. Sanitize all evidence before publishing: remove credentials, private keys, API tokens, personal information, and sensitive network details (public IP addresses, internal hostnames, MAC addresses) from commands, outputs, screenshots, and captures. Use the generic identifiers `student` (local user) and `linux-vm` (hostname) in place of real local usernames and hostnames, and show home paths as `/home/student/...`.
 
 ## 1. Lab Overview
 
@@ -189,6 +189,7 @@ The following screenshot demonstrates the ICMP packets observed during the exper
 ## 13. Evidence & Supporting Files
 
 > Sanitize all evidence before publishing: remove credentials, private keys, API tokens, personal information, and sensitive network details.
+> Usernames and hostnames in commands, outputs, and screenshots must use the generic identifiers `student` and `linux-vm`; redact them in screenshots rather than publishing the real account or host names.
 
 | Filename | Description | Related Step |
 | --- | --- | --- |

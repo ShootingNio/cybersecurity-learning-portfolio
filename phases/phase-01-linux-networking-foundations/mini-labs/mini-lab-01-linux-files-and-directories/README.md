@@ -25,7 +25,7 @@ This mini-lab practices basic Linux filesystem navigation and file management us
 - Removed the copy with `rm` and the empty `evidence/` directory with `rmdir`; the final listing contains only `lab1.txt`.
 - Confirmed the working distinction between `rm` (files) and `rmdir` (empty directories only), and that `mv` serves both as a move and a rename operation.
 
-> **Documentation accuracy note.** The original execution took place on November 1, 2026, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `hello.txt`, `example2/`) and includes command-entry mistakes that were corrected during that session. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document.
+> **Documentation accuracy note.** The original execution took place on November 1, 2026, and was not captured in screenshots. The procedure in Section 5 is the authoritative record, taken from the author's handwritten notes. The screenshot in Section 13 is **supplementary evidence from a later recreation** of the exercise (November 16, 2026): it uses different names (`~/example`, `hello.txt`, `example2/`) and includes command-entry mistakes that were corrected during that session. It does **not** document the original command sequence, and the original filenames have not been replaced with the recreation's names anywhere in this document. Usernames and hostnames in commands and outputs use the generic identifiers `student` (local user) and `linux-vm` (hostname) in place of the author's real local account details.
 
 ## 2. Objectives
 
@@ -49,7 +49,7 @@ This mini-lab practices basic Linux filesystem navigation and file management us
 
 ## 4. Technical Background
 
-- **Home directory (`~`):** The tilde is a shell shortcut for the current user's home directory (`/home/nio` on this VM). `~/cyberlab` is therefore the `cyberlab` directory inside the home directory.
+- **Home directory (`~`):** The tilde is a shell shortcut for the current user's home directory (`/home/student` on this VM). `~/cyberlab` is therefore the `cyberlab` directory inside the home directory.
 - **Absolute vs. relative paths:** A path starting with `/` or `~` is absolute (complete from the filesystem root or home); a path such as `evidence/` is relative to the current working directory.
 - **Current working directory:** The directory the shell is operating in. `pwd` prints it, and `cd` changes it.
 - **Hidden entries (`.` and `..`):** Every directory contains `.` (itself) and `..` (its parent). `ls` hides them by default; `ls -la` shows them along with all other hidden files.
@@ -71,7 +71,7 @@ This mini-lab practices basic Linux filesystem navigation and file management us
 mkdir ~/cyberlab
 ```
 
-**Command Explanation:** `mkdir` creates a new directory. `~` expands to the user's home directory, so the directory is created at `/home/nio/cyberlab`.
+**Command Explanation:** `mkdir` creates a new directory. `~` expands to the user's home directory, so the directory is created at `/home/student/cyberlab`.
 
 **Expected Output:** No output on success; the directory is created silently.
 
@@ -123,7 +123,7 @@ pwd
 **Representative Output:**
 
 ```text
-/home/nio/cyberlab
+/home/student/cyberlab
 ```
 
 **Technical Interpretation:** The shell is now operating inside `~/cyberlab`; all subsequent relative paths resolve from here.
@@ -349,7 +349,7 @@ lab1.txt      (0 bytes)
 | Item | Expected | Representative | Notes |
 | --- | --- | --- | --- |
 | `mkdir ~/cyberlab` | Directory created silently | Created silently | Verified by `ls` in Step 2 |
-| `pwd` after `cd` | `/home/nio/cyberlab` | `/home/nio/cyberlab` | Matches |
+| `pwd` after `cd` | `/home/student/cyberlab` | `/home/student/cyberlab` | Matches |
 | `touch notes.txt` | Empty file listed | `notes.txt` (0 bytes) listed | Matches |
 | `ls -la` | Shows `.` and `..` | Shows `.` and `..` | Matches |
 | `cp notes.txt evidence/` | Copy at `evidence/notes.txt` | Copy present | Verified in Step 7.1 |

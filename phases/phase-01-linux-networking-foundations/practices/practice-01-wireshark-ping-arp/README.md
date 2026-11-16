@@ -127,7 +127,7 @@ wireshark &
 getent group wireshark
 groups
 ls -l /usr/bin/dumpcap
-sudo usermod -aG wireshark nio
+sudo usermod -aG wireshark student
 newgrp wireshark
 ```
 
@@ -137,7 +137,7 @@ newgrp wireshark
 - `getent group wireshark` checks whether the Wireshark group exists in the system database.
 - `groups` displays the groups associated with the current user session.
 - `ls -l /usr/bin/dumpcap` inspects the capture utility's permissions.
-- `sudo usermod -aG wireshark nio` adds user `nio` to the Wireshark supplementary group.
+- `sudo usermod -aG wireshark student` adds user `student` to the Wireshark supplementary group.
 - `newgrp wireshark` starts a shell with the selected group as its active group, without closing the session.
 
 **Expected Output:** Wireshark opens; the group and dumpcap checks show whether the user can capture without root.
@@ -153,7 +153,7 @@ $ ls -l /usr/bin/dumpcap
 
 Wireshark 4.6.4 opened. A non-blocking GUI warning was shown at launch (desktop portal application registration, `QDBusError("org.freedesktop.portal.Error.Failed", "Could not register app ID: Connection already associated with an application ID")`); Wireshark still launched and captured normally.
 
-**Technical Interpretation:** The `wireshark` group exists (GID 115) but initially had no users. `dumpcap` is owned by root, group `wireshark`, with permissions `rwxr-x---`: root can do everything, the Wireshark group can execute it, and others have no access. Group membership and dumpcap permissions determine whether a regular user can capture packets without running the full graphical application as root. After adding the user to the group, capture worked as user `nio`.
+**Technical Interpretation:** The `wireshark` group exists (GID 115) but initially had no users. `dumpcap` is owned by root, group `wireshark`, with permissions `rwxr-x---`: root can do everything, the Wireshark group can execute it, and others have no access. Group membership and dumpcap permissions determine whether a regular user can capture packets without running the full graphical application as root. After adding the user to the group, capture worked as user `student`.
 
 Note: the exact installation and permission-change sequence should be confirmed against the terminal history before publication. No `apt install wireshark` command is documented in the laboratory notes; Wireshark 4.6.4 was already present on the system.
 
@@ -355,7 +355,7 @@ IP address       HW type     Flags       HW address            Mask     Device
 | `getent group wireshark` | Inspect group configuration | — | Helps diagnose capture permissions |
 | `groups` | Inspect user groups | — | Verifies group membership |
 | `ls -l /usr/bin/dumpcap` | Inspect capture utility permissions | — | Helps diagnose packet-capture access |
-| `sudo usermod -aG wireshark nio` | Add user to group | `-aG` (append to supplementary group) | Changes supplementary group membership |
+| `sudo usermod -aG wireshark student` | Add user to group | `-aG` (append to supplementary group) | Changes supplementary group membership |
 | `newgrp wireshark` | Start shell with selected group | — | Applies group context to the new shell |
 | `ping -c 4 8.8.8.8` | Test connectivity | `-c 4` (four requests) | Generates ICMP Echo messages |
 | `sudo ip neigh flush all` | Clear neighbor entries | — | Allows address resolution to occur again |
@@ -445,7 +445,7 @@ Understanding ARP and ICMP is useful in network troubleshooting, packet analysis
 
 | Issue | Diagnostics | Resolution | Status |
 | --- | --- | --- | --- |
-| Wireshark capture permissions | Inspected the Wireshark group (`getent group wireshark`) and dumpcap permissions (`ls -l /usr/bin/dumpcap`) | User added to the `wireshark` group; capture worked as user `nio` | Resolved |
+| Wireshark capture permissions | Inspected the Wireshark group (`getent group wireshark`) and dumpcap permissions (`ls -l /usr/bin/dumpcap`) | User added to the `wireshark` group; capture worked as user `student` | Resolved |
 | Wireshark launch warning | GUI reported an application registration warning involving the desktop portal | Wireshark still launched and captured normally | Non-blocking warning observed |
 | Virtual machine clock incorrect | Capture timestamps showed 2026-07-22 while the lab was performed 2025-08-31 | Time corrected in the VM | Resolved |
 
@@ -484,7 +484,7 @@ The exercise established practical foundations for future work in network monito
 
 ## 13. Evidence & Supporting Files
 
-> Sanitization note: no packet capture is published in this repository. The original capture (591 packets) was analyzed with `tshark` for verification only. Screenshots were sanitized by the author: MAC addresses are redacted with black bars, and MAC addresses are likewise redacted in this document. The IP addresses shown are the virtual NAT network (10.0.2.0/24) and Google's public DNS (8.8.8.8). No credentials, tokens, or personal information are present in the published evidence. Note: one screenshot retains a tiny fragment of a redacted value (part of a vendor string in the ARP packet list); it does not reveal the full address.
+> Sanitization note: no packet capture is published in this repository. The original capture (591 packets) was analyzed with `tshark` for verification only. Screenshots were sanitized by the author: MAC addresses are redacted with black bars, and MAC addresses are likewise redacted in this document. The IP addresses shown are the virtual NAT network (10.0.2.0/24) and Google's public DNS (8.8.8.8). No credentials, tokens, or personal information are present in the published evidence. Note: one screenshot retains a tiny fragment of a redacted value (part of a vendor string in the ARP packet list); it does not reveal the full address. Usernames and hostnames in commands and outputs use the generic identifiers `student` (local user) and `linux-vm` (hostname) in place of the author's real local account details.
 
 | Filename | Description | Related Step |
 | --- | --- | --- |
