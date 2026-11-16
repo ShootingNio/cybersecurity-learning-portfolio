@@ -406,7 +406,7 @@ The four Time Exceeded messages came from the gateway (10.0.2.2) and were addres
 - `screenshots/01-network-configuration.jpg` — Interface configuration (`ip addr`) and Wireshark startup.
 - `screenshots/02-icmp-connectivity.jpg` — Ping results and ICMP packet list.
 - `screenshots/03-arp-exchange.jpg` — Ping results, ARP filter, and ARP Reply packet details.
-- `screenshots/04-kernel-arp-table.jpg` — Interface details (`ip link`) and kernel ARP table (`/proc/net/arp`).
+- `screenshots/04-kernel-arp-table.jpg` — Kernel ARP table (`/proc/net/arp`).
 
 ## 8. Security Analysis
 
@@ -484,14 +484,14 @@ The exercise established practical foundations for future work in network monito
 
 ## 13. Evidence & Supporting Files
 
-> Sanitization note: no packet capture is published in this repository. The original capture (591 packets) was analyzed with `tshark` for verification only. Screenshots were sanitized by the author: MAC addresses are redacted with black bars, and MAC addresses are likewise redacted in this document. The IP addresses shown are the virtual NAT network (10.0.2.0/24) and Google's public DNS (8.8.8.8). No credentials, tokens, or personal information are present in the published evidence. Note: two screenshots retain tiny fragments of redacted values (the last bytes of the gateway MAC in the ARP table screenshot and part of a vendor string in the ARP packet list); they do not reveal the full addresses.
+> Sanitization note: no packet capture is published in this repository. The original capture (591 packets) was analyzed with `tshark` for verification only. Screenshots were sanitized by the author: MAC addresses are redacted with black bars, and MAC addresses are likewise redacted in this document. The IP addresses shown are the virtual NAT network (10.0.2.0/24) and Google's public DNS (8.8.8.8). No credentials, tokens, or personal information are present in the published evidence. Note: one screenshot retains a tiny fragment of a redacted value (part of a vendor string in the ARP packet list); it does not reveal the full address.
 
 | Filename | Description | Related Step |
 | --- | --- | --- |
 | `screenshots/01-network-configuration.jpg` | Network configuration and Wireshark startup | 1–4 |
 | `screenshots/02-icmp-connectivity.jpg` | ICMP test and packet inspection | 5–7 |
 | `screenshots/03-arp-exchange.jpg` | ARP packet inspection | 8–10 |
-| `screenshots/04-kernel-arp-table.jpg` | Interface information and kernel ARP table | 2, 11 |
+| `screenshots/04-kernel-arp-table.jpg` | Kernel ARP table | 11 |
 
 ### Practice Directory Structure
 
