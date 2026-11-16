@@ -40,9 +40,9 @@ This laboratory explores basic network identification, connectivity testing, and
 
 | Component | Details |
 | --- | --- |
-| Host OS | Windows (version to confirm) |
+| Host OS | Windows 11 |
 | Hypervisor / VM Platform | Oracle VM VirtualBox 7.2.8 (version at the time of the lab) |
-| Guest OS | Ubuntu Linux (exact edition to confirm) |
+| Guest OS | Ubuntu Desktop 26.04 |
 | Network Configuration | VirtualBox NAT; observed subnet 10.0.2.0/24; gateway 10.0.2.2 |
 | Network Interface | enp0s3 |
 | Tools | Wireshark 4.6.4, Linux iproute2 utilities, APT |
