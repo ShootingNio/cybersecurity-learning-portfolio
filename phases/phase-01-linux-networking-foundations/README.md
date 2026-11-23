@@ -83,13 +83,24 @@ Additional tools may be introduced as new concepts and practical exercises requi
 
 Structured hands-on exercises designed to develop and evaluate practical technical skills.
 
-| Practice | Subject |
-|---|---|
-| Practice 01 | Wireshark, ICMP & ARP Analysis |
-| Practice 02 | DNS Fundamentals & Resolution Analysis |
-| Practice 03 | SSH & SFTP |
-| Practice 04 | Network Interfaces & IP Configuration |
-| Practice 05–08 | Additional foundational networking and Linux exercises |
+| Practice | Subject | Status |
+|---|---|---|
+| Practice 01 | [Wireshark, ICMP & ARP Analysis](practices/practice-01-wireshark-ping-arp/) | Completed |
+| Practice 02 | [DNS Fundamentals and Analysis](practices/practice-02-dns-fundamentals/) | Completed |
+| Practice 03 | SSH + SFTP | Not started |
+| Practice 04 | HTTP + HTTPS | Not started |
+| Practice 05 | tcpdump | Not started |
+| Practice 06 | Nmap | Not started |
+| Practice 07 | Firewall | Not started |
+| Practice 08 | Investigation Case | Not started |
+| Practice 09 | Tor Introduction | Not started |
+| Practice 10 | Secure Tor Setup | Not started |
+| Practice 11 | Responsible Tor Browsing | Not started |
+| Practice 12 | Wireshark + Tor | Not started |
+| Practice 13 | DNS + Tor | Not started |
+| Practice 14 | Onion Services | Not started |
+| Practice 15 | OSINT with Tor | Not started |
+| Practice 16 | Final Integrated Project | Not started |
 
 Each practice will include its own documentation, commands, observations, technical analysis, and references where applicable.
 
