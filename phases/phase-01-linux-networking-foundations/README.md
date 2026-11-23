@@ -79,6 +79,17 @@ The following technologies and tools are used throughout this phase:
 
 Additional tools may be introduced as new concepts and practical exercises require them.
 
+### Lab Hardware
+
+The physical equipment used in this phase's laboratory work:
+
+| Item | Details | Use |
+|---|---|---|
+| Main laptop (Dell) | 16 GB RAM — VirtualBox host running the Ubuntu lab virtual machine | Primary laboratory machine |
+| Microsoft Surface Pro | 8 GB RAM, Windows 11 | Documentation machine and physical Windows endpoint |
+| USB flash drive | SanDisk Ultra USB 3.0, 64 GB | Storage, partitioning, mounting, and Linux practices |
+| Ethernet cable | Cat 6, 14 ft | Physical networking and traffic analysis |
+
 ## Practices
 
 Structured hands-on exercises designed to develop and evaluate practical technical skills.
