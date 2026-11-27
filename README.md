@@ -109,6 +109,19 @@ Some of the tools and technologies currently included in my learning environment
 - DNS utilities (`dig`, `host`, `nslookup`)
 - SSH and SFTP
 
+*Complementary additions (Phase 01 complementary toolset, adopted Nov 27, 2026 — extras on top of the original toolset, which is unchanged):*
+- Netcat
+- OpenSSL
+- MTR
+- Lynis (system auditing)
+
+### OSINT & Digital Intelligence (Phase 02 — complementary module P02-EXT)
+- Sherlock (username search)
+- Maltego (link analysis)
+- Google Lens (image search)
+- TinEye (reverse image search)
+- FaceCheck.ID (self-audit of my own photos only)
+
 ### Development & Scripting
 - Bash
 - Python
