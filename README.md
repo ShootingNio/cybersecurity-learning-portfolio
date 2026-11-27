@@ -17,6 +17,21 @@ My goal is to develop a strong foundation in cybersecurity while progressively e
 
 Rather than simply collecting commands or following tutorials, I aim to understand how technologies work, why security mechanisms matter, how vulnerabilities can be investigated, and how defensive and offensive security techniques are applied in real-world environments.
 
+## Purpose & Professional Direction
+
+This portfolio is not a general collection of exercises. It is the working record of my personal and professional development toward a career in **Cyber Threat Intelligence (CTI)**.
+
+My professional path is:
+
+**Security Operations (SOC) / Security Analyst → Cyber Threat Intelligence Analyst → OSINT & Digital Intelligence specialization**
+
+- **Core strength:** Open-Source Intelligence (OSINT) and digital investigations.
+- **Core supports:** Networking, Linux systems, and Blue Team / security operations skills.
+- **Specialization interest:** Financial fraud and blockchain investigations — following money across wallets and exchanges, and applying networking, defensive security, and OSINT to the financial sector.
+- **Long-term direction:** Intelligence-driven security work in the private or public sector.
+
+Every phase, lab, and project in this repository is selected and ordered to build toward that direction. The roadmap below is therefore studied in a deliberate priority order (see *Study Order & Priorities*), not simply in numerical order.
+
 ## About Me
 
 **Daniel Solano**  
@@ -26,10 +41,11 @@ I am a Computer Science student with a strong interest in cybersecurity, Linux s
 
 My primary areas of interest include:
 
-- Blue Team and Defensive Security
+- Cyber Threat Intelligence (CTI)
+- OSINT & Digital Intelligence
+- Blue Team and Security Operations
 - Network Security
-- Red Team and Offensive Security
-- Cloud Security
+- Financial Fraud & Blockchain Investigations
 
 As a bilingual researcher, I regularly explore technical documentation, cybersecurity resources, research materials, and security-related information in both English and Spanish.
 
@@ -64,6 +80,24 @@ The portfolio follows a structured 17-phase roadmap designed to progressively de
 | 17 | DevSecOps | Integrating security into software development, CI/CD pipelines, automation, and infrastructure. |
 
 *The roadmap is progressive but flexible. Each phase will be documented as the corresponding subjects are studied and practical work is completed.*
+
+### Study Order & Priorities
+
+The phases keep their original numbering and content, but they are studied in a priority order aligned with my professional direction, in two passes:
+
+**Pass 1 — Fundamentals first** (general, foundational knowledge, content unchanged):
+Phase 01 → Phase 02 → Phase 03 → Phase 04 → Phase 11 → Phase 13
+
+**Specialization extension** (studied after Pass 1, ahead of the supporting phases, because it serves my financial-sector direction):
+Extension 19 — Blockchain, Cryptocurrency & Digital Asset Security: wallet security (hot and cold wallets), blockchain OSINT, and digital-asset investigations.
+
+**Supporting phases** (in order):
+Phase 06 → Phase 07 → Phase 08 → Phase 12 → Phase 14 → Phase 15 → Phase 16
+
+**Later** (least aligned with my current direction):
+Phase 05 → Phase 09 → Phase 10 → Phase 17
+
+**Pass 2 — Advanced specialization:** after Pass 1 is complete, a second, advanced pass revisits the fundamental phases in greater depth, specialized toward my CTI professional profile.
 
 ## Technologies & Tools
 
