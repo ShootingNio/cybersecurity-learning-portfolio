@@ -30,7 +30,7 @@ My professional path is:
 - **Specialization interest:** Financial fraud and blockchain investigations — following money across wallets and exchanges, and applying networking, defensive security, and OSINT to the financial sector.
 - **Long-term direction:** Intelligence-driven security work in the private or public sector.
 
-Every phase, lab, and project in this repository is selected and ordered to build toward that direction. The roadmap below is therefore studied in a deliberate priority order (see *Study Order & Priorities*), not simply in numerical order.
+Every phase, lab, and project in this repository is selected and ordered to build toward that direction. The roadmap below is therefore numbered in that priority order (see *How the roadmap is studied — two passes*), rather than in the roadmap's original order.
 
 ## About Me
 
@@ -57,45 +57,34 @@ My objective is to continuously strengthen my technical knowledge, develop pract
 
 ## Learning Roadmap
 
-The portfolio follows a structured 17-phase roadmap designed to progressively develop technical knowledge and practical skills.
+The portfolio follows a structured 17-phase roadmap designed to progressively develop technical knowledge and practical skills. The phases are numbered in **study-priority order**, aligned with my professional direction (see *Purpose & Professional Direction*). The "Formerly" column preserves the roadmap's original numbering for reference; the content of every phase is unchanged.
 
-| Phase | Domain | Focus |
-|---|---|---|
-| 01 | Linux, Networking & Foundations | Linux administration, networking fundamentals, system analysis, and essential security concepts. |
-| 02 | Advanced Networking, Cryptography & OSINT | Advanced network analysis, cryptographic concepts, and open-source intelligence techniques. |
-| 03 | Threat Hunting, Malware & Blue Team | Threat detection, malware fundamentals, security monitoring, and defensive analysis. |
-| 04 | Red Team, Blue Team & DFIR Foundations | Offensive and defensive security practices, incident response, digital forensics, and professional development. |
-| 05 | Mobile Security | Mobile operating system architecture, application security, and mobile threat analysis. |
-| 06 | Cloud Security | Cloud infrastructure, identity and access management, configuration security, and cloud threat detection. |
-| 07 | Web Application Security | Web technologies, common vulnerabilities, application testing, and secure development principles. |
-| 08 | Active Directory | Windows domains, identity management, authentication, and enterprise security. |
-| 09 | Reverse Engineering | Binary analysis, assembly fundamentals, debugging, and software behavior analysis. |
-| 10 | Advanced Malware Analysis | Static and dynamic malware analysis, behavioral investigation, and reverse engineering techniques. |
-| 11 | Digital Forensics & DFIR | Evidence acquisition, forensic analysis, incident investigation, and recovery. |
-| 12 | Advanced Red Team | Advanced penetration testing, adversary simulation, and attack methodologies. |
-| 13 | Advanced Blue Team | Security operations, detection engineering, threat intelligence, and defensive architecture. |
-| 14 | AI Security | Security risks affecting AI systems, machine learning models, and AI infrastructure. |
-| 15 | AI-Powered Cybersecurity | Applying AI technologies to security analysis, automation, and threat detection. |
-| 16 | Emerging Threats | Research into evolving attack techniques, technologies, and cybersecurity challenges. |
-| 17 | DevSecOps | Integrating security into software development, CI/CD pipelines, automation, and infrastructure. |
+| Phase | Domain | Focus | Formerly |
+|---|---|---|---|
+| 01 | Linux, Networking & Foundations | Linux administration, networking fundamentals, system analysis, and essential security concepts. | 01 |
+| 02 | Advanced Networking, Cryptography & OSINT | Advanced network analysis, cryptographic concepts, and open-source intelligence techniques. | 02 |
+| 03 | Threat Hunting, Malware & Blue Team | Threat detection, malware fundamentals, security monitoring, and defensive analysis. | 03 |
+| 04 | Red Team, Blue Team & DFIR Foundations | Offensive and defensive security practices, incident response, digital forensics, and professional development. | 04 |
+| 05 | Digital Forensics & DFIR | Evidence acquisition, forensic analysis, incident investigation, and recovery. | 11 |
+| 06 | Advanced Blue Team | Security operations, detection engineering, threat intelligence, and defensive architecture. | 13 |
+| Ext. | **Blockchain, Cryptocurrency & Digital Asset Security** (Extension 19) | Wallet security (hot and cold wallets), blockchain OSINT, and digital-asset investigations. Studied right after the fundamentals because it serves my financial-sector direction. | — |
+| 07 | Cloud Security | Cloud infrastructure, identity and access management, configuration security, and cloud threat detection. | 06 |
+| 08 | Web Application Security | Web technologies, common vulnerabilities, application testing, and secure development principles. | 07 |
+| 09 | Active Directory | Windows domains, identity management, authentication, and enterprise security. | 08 |
+| 10 | Advanced Red Team | Advanced penetration testing, adversary simulation, and attack methodologies. | 12 |
+| 11 | AI Security | Security risks affecting AI systems, machine learning models, and AI infrastructure. | 14 |
+| 12 | AI-Powered Cybersecurity | Applying AI technologies to security analysis, automation, and threat detection. | 15 |
+| 13 | Emerging Threats | Research into evolving attack techniques, technologies, and cybersecurity challenges. | 16 |
+| 14 | Mobile Security | Mobile operating system architecture, application security, and mobile threat analysis. | 05 |
+| 15 | Reverse Engineering | Binary analysis, assembly fundamentals, debugging, and software behavior analysis. | 09 |
+| 16 | Advanced Malware Analysis | Static and dynamic malware analysis, behavioral investigation, and reverse engineering techniques. | 10 |
+| 17 | DevSecOps | Integrating security into software development, CI/CD pipelines, automation, and infrastructure. | 17 |
 
 *The roadmap is progressive but flexible. Each phase will be documented as the corresponding subjects are studied and practical work is completed.*
 
-### Study Order & Priorities
+### How the roadmap is studied — two passes
 
-The phases keep their original numbering and content, but they are studied in a priority order aligned with my professional direction, in two passes:
-
-**Pass 1 — Fundamentals first** (general, foundational knowledge, content unchanged):
-Phase 01 → Phase 02 → Phase 03 → Phase 04 → Phase 11 → Phase 13
-
-**Specialization extension** (studied after Pass 1, ahead of the supporting phases, because it serves my financial-sector direction):
-Extension 19 — Blockchain, Cryptocurrency & Digital Asset Security: wallet security (hot and cold wallets), blockchain OSINT, and digital-asset investigations.
-
-**Supporting phases** (in order):
-Phase 06 → Phase 07 → Phase 08 → Phase 12 → Phase 14 → Phase 15 → Phase 16
-
-**Later** (least aligned with my current direction):
-Phase 05 → Phase 09 → Phase 10 → Phase 17
+**Pass 1 — Fundamentals first:** Phases 01–06 are the fundamental core, studied first with their content exactly as designed. The Blockchain & Cryptocurrency extension follows immediately after them, ahead of the supporting phases (07–13) and the later phases (14–17).
 
 **Pass 2 — Advanced specialization:** after Pass 1 is complete, a second, advanced pass revisits the fundamental phases in greater depth, specialized toward my CTI professional profile.
 
